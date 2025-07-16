@@ -14,12 +14,14 @@ A modern web application that uses advanced NLP techniques to parse resumes and 
 ## 🛠 Tech Stack
 
 ### Frontend
+
 - **React 18** with TypeScript
 - **Vite** for fast development
 - **Tailwind CSS** for styling
 - **Lucide React** for icons
 
 ### Backend
+
 - **FastAPI** for high-performance API
 - **spaCy** for natural language processing
 - **scikit-learn** for machine learning algorithms
@@ -67,21 +69,33 @@ The backend API will be available at `http://localhost:8000`
 ## 📁 Project Structure
 
 ```
-├── src/                    # React frontend source
-│   ├── components/         # React components
-│   │   ├── FileUpload.tsx
-│   │   ├── MatchResults.tsx
-│   │   ├── SkillGaps.tsx
-│   │   └── OptimizationTips.tsx
-│   ├── App.tsx            # Main application component
-│   ├── main.tsx           # React entry point
-│   └── index.css          # Global styles
-├── backend/               # Python backend
-│   ├── main.py           # FastAPI application
-│   └── requirements.txt  # Python dependencies
-├── public/               # Static assets
-├── package.json          # Node.js dependencies
-└── README.md            # This file
+├── src/                      # React frontend source
+│   ├── components/           # React components
+│   │   ├── FileUpload.tsx    # File upload component with drag & drop
+│   │   ├── MatchResults.tsx  # Match score display and visualization
+│   │   ├── SkillGaps.tsx     # Skill gap analysis component
+│   │   └── OptimizationTips.tsx # AI recommendations component
+│   ├── App.tsx              # Main application component
+│   ├── main.tsx             # React entry point
+│   ├── index.css            # Global Tailwind CSS styles
+│   └── vite-env.d.ts        # Vite TypeScript definitions
+├── backend/                 # Python FastAPI backend
+│   ├── main.py             # FastAPI application with NLP processing
+│   ├── requirements.txt    # Python dependencies
+│   └── install_spacy.py    # spaCy model installer script
+├── public/                 # Static assets
+├── package.json           # Frontend Node.js dependencies
+├── package-lock.json      # Locked dependency versions
+├── tsconfig.json          # TypeScript configuration
+├── tsconfig.app.json      # App-specific TypeScript config
+├── tsconfig.node.json     # Node-specific TypeScript config
+├── vite.config.ts         # Vite build configuration
+├── tailwind.config.js     # Tailwind CSS configuration
+├── postcss.config.js      # PostCSS configuration
+├── eslint.config.js       # ESLint configuration
+├── index.html             # HTML entry point
+├── .gitignore             # Git ignore patterns
+└── README.md              # Project documentation
 ```
 
 ## 🔧 API Endpoints
@@ -105,17 +119,20 @@ The backend API will be available at `http://localhost:8000`
 ## 🎯 Key Features Explained
 
 ### Smart Skill Extraction
+
 - Recognizes 70+ technical skills across programming, web development, databases, cloud, and more
 - Uses pattern matching and NLP to identify relevant experience
 - Extracts education and certification information
 
 ### Advanced Matching Algorithm
+
 - **40% Weight**: Direct skill matching
 - **30% Weight**: Keyword density analysis
 - **20% Weight**: Text similarity (TF-IDF + Cosine)
 - **10% Weight**: Experience level matching
 
 ### Personalized Recommendations
+
 - High-impact action items based on match score
 - Quick wins for immediate improvements
 - Long-term strategies for career development
@@ -124,6 +141,7 @@ The backend API will be available at `http://localhost:8000`
 ## 🚀 Development
 
 ### Frontend Development
+
 ```bash
 npm run dev          # Start development server
 npm run build        # Build for production
@@ -132,6 +150,7 @@ npm run lint         # Run ESLint
 ```
 
 ### Backend Development
+
 ```bash
 cd backend
 python3 main.py      # Start FastAPI server with auto-reload
@@ -140,6 +159,7 @@ python3 main.py      # Start FastAPI server with auto-reload
 ## 📦 Dependencies
 
 ### Frontend Dependencies
+
 - React & React DOM
 - TypeScript
 - Vite
@@ -148,6 +168,7 @@ python3 main.py      # Start FastAPI server with auto-reload
 - ESLint & TypeScript ESLint
 
 ### Backend Dependencies
+
 - FastAPI
 - Uvicorn (ASGI server)
 - spaCy (NLP)
@@ -178,22 +199,24 @@ python3 main.py      # Start FastAPI server with auto-reload
 
 Our AI-powered matching system uses a weighted scoring approach to provide accurate job compatibility assessments:
 
-| **Metric** | **Weight** | **Description** | **Impact on Score** |
-|------------|------------|-----------------|-------------------|
-| **Skill Matching** | 40% | Direct comparison of technical skills | High - Core competency alignment |
-| **Keyword Density** | 30% | NLP-based keyword extraction and matching | High - Content relevance |
-| **Text Similarity** | 20% | TF-IDF + Cosine similarity analysis | Medium - Semantic understanding |
-| **Experience Level** | 10% | Years of experience and seniority matching | Low - Context enhancement |
+| **Metric**           | **Weight** | **Description**                            | **Impact on Score**              |
+| -------------------- | ---------- | ------------------------------------------ | -------------------------------- |
+| **Skill Matching**   | 40%        | Direct comparison of technical skills      | High - Core competency alignment |
+| **Keyword Density**  | 30%        | NLP-based keyword extraction and matching  | High - Content relevance         |
+| **Text Similarity**  | 20%        | TF-IDF + Cosine similarity analysis        | Medium - Semantic understanding  |
+| **Experience Level** | 10%        | Years of experience and seniority matching | Low - Context enhancement        |
 
 ### **Performance Metrics**
 
 #### **Accuracy Benchmarks**
+
 - **Skill Detection Rate**: 92% accuracy in identifying technical skills
 - **Keyword Extraction**: 88% precision in relevant keyword identification
 - **False Positive Rate**: <5% for skill matching
 - **Processing Speed**: <2 seconds average for document analysis
 
 #### **User Impact Metrics**
+
 - **Resume Optimization**: Users see 35% average improvement in match scores after following recommendations
 - **Interview Rate**: 60% increase in interview callbacks for optimized resumes
 - **Time Savings**: 80% reduction in manual resume tailoring time
@@ -202,12 +225,14 @@ Our AI-powered matching system uses a weighted scoring approach to provide accur
 ### **Business Impact**
 
 #### **For Job Seekers**
+
 - 📈 **Higher Match Rates**: Increase job application success by 40-60%
 - ⏱️ **Time Efficiency**: Reduce resume customization time from hours to minutes
 - 🎯 **Targeted Applications**: Focus on roles with 70%+ compatibility scores
 - 📚 **Skill Development**: Clear roadmap for career advancement
 
 #### **For Recruiters** (Future Enhancement)
+
 - 🔍 **Better Candidate Screening**: Pre-filter candidates with 80%+ match scores
 - 📊 **Data-Driven Decisions**: Objective scoring reduces hiring bias
 - 💰 **Cost Reduction**: 50% decrease in time-to-hire
@@ -216,6 +241,7 @@ Our AI-powered matching system uses a weighted scoring approach to provide accur
 ### **Technical Performance**
 
 #### **Algorithm Efficiency**
+
 ```
 Document Processing:
 ├── PDF Extraction: ~0.5s per page
@@ -227,6 +253,7 @@ Total Processing Time: <3 seconds per job match
 ```
 
 #### **Scalability Metrics**
+
 - **Concurrent Users**: Supports 100+ simultaneous analyses
 - **Document Size**: Handles files up to 10MB efficiently
 - **Memory Usage**: <512MB RAM per analysis session
@@ -235,16 +262,18 @@ Total Processing Time: <3 seconds per job match
 ### **Success Indicators**
 
 #### **Match Score Interpretation**
-| **Score Range** | **Recommendation** | **Expected Outcome** |
-|-----------------|-------------------|---------------------|
-| **80-100%** | Apply immediately | 70% interview rate |
-| **60-79%** | Minor optimizations needed | 45% interview rate |
-| **40-59%** | Significant improvements required | 20% interview rate |
-| **<40%** | Major skill gaps to address | <10% interview rate |
+
+| **Score Range** | **Recommendation**                | **Expected Outcome** |
+| --------------- | --------------------------------- | -------------------- |
+| **80-100%**     | Apply immediately                 | 70% interview rate   |
+| **60-79%**      | Minor optimizations needed        | 45% interview rate   |
+| **40-59%**      | Significant improvements required | 20% interview rate   |
+| **<40%**        | Major skill gaps to address       | <10% interview rate  |
 
 #### **Optimization Impact**
+
 - **Quick Wins** (1 week): 15-25% score improvement
-- **Medium-term** (1 month): 25-40% score improvement  
+- **Medium-term** (1 month): 25-40% score improvement
 - **Long-term** (3 months): 40-60% score improvement
 
 ### **Data Privacy & Security**
@@ -257,11 +286,13 @@ Total Processing Time: <3 seconds per job match
 ## 🐛 Troubleshooting
 
 ### Backend Issues
+
 - **spaCy model not found**: Run `python3 -m spacy download en_core_web_sm`
 - **Port 8000 in use**: Change port in `main.py` or kill existing process
 - **CORS errors**: Ensure frontend runs on `http://localhost:5173`
 
 ### Frontend Issues
+
 - **Backend offline**: Ensure Python server is running on port 8000
 - **File upload fails**: Check file format (PDF/DOCX only) and size (<10MB)
 
