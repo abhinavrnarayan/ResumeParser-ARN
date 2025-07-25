@@ -303,6 +303,12 @@ Total Processing Time: <3 seconds per job match
 - **NLP**: spaCy provides efficient text processing
 - **ML**: scikit-learn ensures fast similarity calculations
 
+## 📷 Output
+
+![alt text](6339060228259169624.jpg)
+![alt text](6339060228259169625.jpg)
+<video controls src="Recording 2025-07-22 200422.mp4" title="Title"></video>
+
 ## 🤝 Contributing
 
 1. Fork the repository
