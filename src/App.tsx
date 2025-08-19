@@ -32,7 +32,7 @@ interface MatchResult {
   recommendations: string[];
 }
 
-const API_BASE_URL = "http://localhost:8000";
+const API_BASE_URL = "http://16.16.183.79:8000";
 
 function App() {
   const [resume, setResume] = useState<ParsedData | null>(null);
